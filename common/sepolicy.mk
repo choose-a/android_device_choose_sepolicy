@@ -16,19 +16,19 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/carbon/sepolicy/common/public
+    device/choose/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/carbon/sepolicy/common/private
+    device/choose/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/carbon/sepolicy/common/dynamic
+    device/choose/sepolicy/common/dynamic
 else
 BOARD_SEPOLICY_DIRS += \
-    device/carbon/sepolicy/common/dynamic \
-    device/carbon/sepolicy/common/vendor
+    device/choose/sepolicy/common/dynamic \
+    device/choose/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/carbon/sepolicy/legacy-common/sepolicy.mk
+-include device/choose/sepolicy/legacy-common/sepolicy.mk
